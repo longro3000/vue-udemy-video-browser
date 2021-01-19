@@ -9,8 +9,8 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'SearchBar',
     methods: {
-        onInput: (event) => {
-            console.log(event.target.value);
+        onInput(event) {
+            this.$emit('termChange', event.target.value);
         }
     }
 });
